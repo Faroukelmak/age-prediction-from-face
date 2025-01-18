@@ -1,0 +1,7 @@
+dataset: /kaggle/input/face-detection-dataset
+names:
+- Human Face
+train: /kaggle/input/face-detection-dataset/images/train
+train_labels: /kaggle/input/face-detection-dataset/labels/train
+val: /kaggle/input/face-detection-dataset/images/val
+val_labels: /kaggle/input/face-detection-dataset/labels/val
