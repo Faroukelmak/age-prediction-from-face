@@ -5,7 +5,7 @@ import streamlit as st
 
 
 @st.cache_resource
-def load_yolo_model(yolo_path=r"C:\Users\Farouk\Desktop\age-prediction\outputs\logs\Yolo_logs\runs\detect\train\weights\best.pt"):
+def load_yolo_model(yolo_path=r"models\best.pt"):
     """Load the YOLO model for face detection."""
     from ultralytics import YOLO
     return YOLO(yolo_path)
@@ -19,7 +19,7 @@ def load_yolo_model(yolo_path=r"C:\Users\Farouk\Desktop\age-prediction\outputs\l
 from tensorflow.keras.losses import MeanSquaredError
 
 def load_cnn_model():
-    cnn_path = r'C:\Users\Farouk\Desktop\age-prediction\models\tinyvgg_utkface.h5'  # Update with your actual model path
+    cnn_path = r'models\tinyvgg_utkface.h5'  # Update with your actual model path
     # Loading the model and passing custom_objects
     cnn_model = tf.keras.models.load_model(cnn_path, custom_objects={'mse': MeanSquaredError()}, compile=False)
     return cnn_model
